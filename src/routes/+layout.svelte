@@ -14,6 +14,6 @@
 
 <style>
 	main{
-		height: 600px;
+		height: 580px;
 	}
 </style>
