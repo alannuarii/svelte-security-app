@@ -4,6 +4,8 @@
 	--font-mono: 'Fira Mono', monospace;
 	--color-theme-1: #43a6a3;
 	--color-theme-2: #aac548;
+	--color-theme-1-hover: #318f8b;
+	--color-theme-2-hover: #aac548;
 	--color-text-1: rgba(0, 0, 0, 0.7);
 	--color-text-2: #ffffff;
 	--column-width: 42rem;
@@ -12,8 +14,19 @@
 
 .btn-submit {
 	background: var(--color-theme-1);
+	border: 1px solid var(--color-theme-1);
+}
+
+.btn-submit:hover {
+	background: var(--color-theme-1-hover);
+	border: 1px solid var(--color-theme-1-hover);
 }
 
 .btn-cancel {
+	border: 1px solid var(--color-theme-2);
+}
+
+.btn-cancel:hover {
 	background: var(--color-theme-2);
+	border: 1px solid var(--color-theme-2);
 }

@@ -5,7 +5,7 @@
 				<p>Apakah Anda yakin akan <strong>Logout</strong>?</p>
 			</div>
 			<div class="modal-footer border justify-content-center">
-				<button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal"
+				<button type="button" class="btn btn-outline-secondary btn-cancel" data-bs-dismiss="modal"
 					>Close</button
 				>
 				<button type="button" class="btn btn-primary btn-submit">Logout</button>
