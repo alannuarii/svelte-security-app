@@ -9,7 +9,7 @@
 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" />
 	</div>
 	<div class="offcanvas-body small">
-		<div class="list-group">
+		<div class="list-group list-group-flush">
 			<a href="/" class="list-group-item list-group-item-action"
 				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
 			>

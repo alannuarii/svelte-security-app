@@ -6,11 +6,14 @@
 
 <div>
 	<Header />
-	<main>
+	<main class="border">
 		<slot />
 	</main>
 	<Bottom />
 </div>
 
 <style>
+	main{
+		height: 600px;
+	}
 </style>
