@@ -1,5 +1,6 @@
 <script>
 	import logo from '../lib/img/shield.png';
+	import ShiftDrodown from './ShiftDrodown.svelte';
 </script>
 
 <nav class="navbar">
@@ -7,7 +8,11 @@
 		<a class="navbar-brand flex-grow-1" href="/">
 			<h5>SecurityApp</h5>
 		</a>
-		<a href="/"><i class="bi-people me-4" /></a>
+		<div class="dropdown">
+			<i class="bi-people me-4 " data-bs-toggle="dropdown" />
+			<ShiftDrodown />
+		</div>
+
 		<a href="/"><i class="bi-box-arrow-right" /></a>
 	</div>
 </nav>
