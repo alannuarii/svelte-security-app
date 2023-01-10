@@ -1,10 +1,19 @@
 <script>
+	import BottomOffcanvas from './BottomOffcanvas.svelte';
 </script>
 
 <nav class="navbar fixed-bottom">
 	<div class="container position-relative">
 		<a href="/"><i class="camera bi-camera-fill" /></a>
-		<a href="/" class="menu"><i class="bi-three-dots"></i></a>
+		<div
+			class="menu"
+			data-bs-toggle="offcanvas"
+			data-bs-target="#offcanvasBottom"
+			aria-controls="offcanvasBottom"
+		>
+			<i class="bi-three-dots" />
+		</div>
+		<BottomOffcanvas />
 	</div>
 </nav>
 
@@ -25,7 +34,7 @@
 		border: 15px solid var(--color-text-2);
 		padding: 10px 20px;
 	}
-	.navbar .menu{
+	.navbar .menu {
 		position: absolute;
 		left: 35%;
 		font-size: 35px;
