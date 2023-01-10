@@ -13,3 +13,24 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.btn-submit {
+		background: var(--color-theme-1);
+		border: 1px solid var(--color-theme-1);
+	}
+
+	.btn-submit:hover {
+		background: var(--color-theme-1-hover);
+		border: 1px solid var(--color-theme-1-hover);
+	}
+
+	.btn-cancel {
+		border: 1px solid var(--color-theme-2);
+	}
+
+	.btn-cancel:hover {
+		background: var(--color-theme-2);
+		border: 1px solid var(--color-theme-2);
+	}
+</style>
