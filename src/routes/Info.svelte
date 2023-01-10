@@ -6,7 +6,7 @@
 
 <style>
     h6{
-        font-size: 15px;
+        font-size: 10px;
         margin-bottom: -2px;
     }
 </style>
