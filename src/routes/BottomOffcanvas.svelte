@@ -24,6 +24,6 @@
 	}
 	.offcanvas {
 		border-radius: 20px 20px 0 0;
-		border-top: 7px solid var(--color-theme-2);
+        height: 500px;
 	}
 </style>
