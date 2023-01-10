@@ -13,6 +13,18 @@
 			<a href="/" class="list-group-item list-group-item-action"
 				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
 			>
+			<a href="/" class="list-group-item list-group-item-action"
+				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
+			>
+			<a href="/" class="list-group-item list-group-item-action"
+				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
+			>
+			<a href="/" class="list-group-item list-group-item-action"
+				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
+			>
+			<a href="/" class="list-group-item list-group-item-action"
+				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
+			>
 		</div>
 	</div>
 </div>
@@ -24,6 +36,9 @@
 	}
 	.offcanvas {
 		border-radius: 20px 20px 0 0;
-        height: 500px;
+		height: 500px;
+	}
+	.offcanvas .offcanvas-body {
+		overflow: hidden;
 	}
 </style>
