@@ -36,7 +36,7 @@
 	}
 	.offcanvas {
 		border-radius: 20px 20px 0 0;
-		height: 500px;
+		height: 350px;
 	}
 	.offcanvas .offcanvas-body {
 		overflow: hidden;

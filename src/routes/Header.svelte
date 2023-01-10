@@ -1,6 +1,7 @@
 <script>
 	import logo from '../lib/img/shield.png';
 	import ShiftDrodown from './ShiftDrodown.svelte';
+	import ModalLogout from './ModalLogout.svelte';
 </script>
 
 <nav class="navbar">
@@ -13,7 +14,10 @@
 			<ShiftDrodown />
 		</div>
 
-		<a href="/"><i class="bi-box-arrow-right" /></a>
+		<a href="/"
+			><i class="bi-box-arrow-right" data-bs-toggle="modal" data-bs-target="#modalLogout" /></a
+		>
+		<ModalLogout />
 	</div>
 </nav>
 
