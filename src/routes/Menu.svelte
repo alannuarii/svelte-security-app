@@ -48,7 +48,7 @@
 		transition: ease-in-out 0.3s;
 		/* border: 1px solid rgba(255, 255, 255, 0.3); */
 		/* height: 100%; */
-		width: 150px;
+		width: 130px;
 		text-align: center;
         border-radius: 20px 50px;
 	}
