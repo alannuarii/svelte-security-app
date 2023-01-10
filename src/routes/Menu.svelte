@@ -24,8 +24,8 @@
 	];
 </script>
 
-<section id="menu" class="mt-2">
-	<div class="container text-center p-3">
+<section id="menu" class="mt-1">
+	<div class="container text-center px-3">
 		<div class="row row-cols-2 gy-4">
 			{#each icons as icon}
 				<div class="col flex-column d-flex align-items-center">

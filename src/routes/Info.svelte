@@ -1,5 +1,12 @@
 <section>
 	<div class="alert alert-dark mx-2 mt-2" role="alert">
-		Patroli telah dilaksanakan oleh <strong>Imran Mokodompit</strong> pada pukul 08.00 WITA
+		<h6>Patroli telah dilaksanakan oleh <strong>Imran Mokodompit</strong> pada pukul 08.00 WITA</h6>
 	</div>
 </section>
+
+<style>
+    h6{
+        font-size: 15px;
+        margin-bottom: -2px;
+    }
+</style>
