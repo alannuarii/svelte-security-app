@@ -1,19 +1,13 @@
 <script>
 	import './styles.css';
 	import Header from './Header.svelte';
-	import Bottom from './Bottom.svelte';
 </script>
 
 <div>
 	<Header />
-	<main class="border">
+	<main>
 		<slot />
 	</main>
-	<Bottom />
 </div>
 
-<style>
-	main{
-		height: 530px;
-	}
-</style>
+

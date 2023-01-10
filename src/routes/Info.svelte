@@ -9,5 +9,8 @@
         font-size: 10px;
         margin-bottom: -2px;
     }
+    .alert{
+        border-radius: 15px;
+    }
 </style>
 
