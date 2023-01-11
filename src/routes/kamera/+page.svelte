@@ -2,7 +2,6 @@
 	let active = true;
 	let constraints = { video: { facingMode: 'environment' } };
 	let stream;
-	let hiddenInput;
 
 	function handleSuccess(stream) {
 		video.srcObject = stream;
@@ -13,12 +12,11 @@
 	}
 
 	function takeSnapshot() {
-		const canvas = document.querySelector('canvas');
-		const ctx = canvas.getContext('2d');
-		ctx.drawImage(videoEl, 0, 0, canvas.width, canvas.height);
-		const imgUrl = canvas.toDataURL();
-		document.querySelector('img').src = imgUrl;
-		hiddenInput.value = imgUrl;
+		let canvas = document.createElement('canvas');
+		canvas.width = video.videoWidth;
+		canvas.height = video.videoHeight;
+		canvas.getContext('2d').drawImage(video, 0, 0);
+		// you can now save the image from the canvas
 	}
 
 	function switchCamera() {
@@ -31,11 +29,7 @@
 	}
 
 	function stopCamera() {
-		let tracks = stream.getTracks();
-		tracks.forEach(function (track) {
-			track.stop();
-		});
-		videoEl.srcObject = null;
+		video.srcObject = null;
 		active = false;
 	}
 
@@ -55,6 +49,4 @@
 	<button on:click={switchCamera} disabled={!active}>Switch Camera</button>
 	<button on:click={stopCamera}>Stop Camera</button>
 	<button on:click={startCamera} disabled={active}>Start Camera</button>
-	<canvas width="320" height="240" />
-	<input type="hidden" bind:this={hiddenInput} />
 </section>
