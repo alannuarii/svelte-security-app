@@ -29,6 +29,8 @@
 	}
 
 	function stopCamera() {
+		const tracks = stream.getTracks();
+		tracks.forEach((track) => track.stop());
 		video.srcObject = null;
 		active = false;
 	}
