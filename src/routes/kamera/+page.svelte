@@ -1,11 +1,9 @@
 <script>
 	let constraints = { video: { facingMode: 'environment' } };
 	let stream;
-	let mediaRecorder;
 
 	function handleSuccess(stream) {
 		video.srcObject = stream;
-		mediaRecorder = new MediaRecorder(stream);
 	}
 
 	function handleError(error) {
@@ -20,12 +18,13 @@
 		// you can now save the image from the canvas
 	}
 
-	function startRecording() {
-		mediaRecorder.start();
-	}
-
-	function stopRecording() {
-		mediaRecorder.stop();
+	function switchCamera() {
+		if (constraints.video.facingMode === 'environment') {
+			constraints.video.facingMode = 'user';
+		} else {
+			constraints.video.facingMode = 'environment';
+		}
+		navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
 	}
 
 	navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
@@ -36,6 +35,7 @@
 	<video id="video" autoplay playsinline bing:this={stream} />
 
 	<button on:click={takeSnapshot}>Take snapshot</button>
-	<button on:click={startRecording}>Start Recording</button>
-	<button on:click={stopRecording}>Stop Recording</button>
+	<button on:click={switchCamera}>Switch Camera</button>
+	<!-- svelte-ignore missing-declaration -->
+	<button on:click={() => (video.srcObject = null)}>Stop Camera</button>
 </section>
