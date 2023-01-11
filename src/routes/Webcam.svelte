@@ -3,18 +3,14 @@
 	let mediaStream;
 	let videoEl;
 	let hiddenInput;
-	let isWebcamOn = true;
-	let resetBtn = true;
-	let activateBtn = true;
+	let resetBtn = false;
 	let takeSnapshotBtn = true;
+	let isCanvasOn = false;
 
 	async function getWebcam() {
 		mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
 		videoEl.srcObject = mediaStream;
 		videoEl.play();
-		isWebcamOn = true;
-		resetBtn = true;
-		activateBtn = false;
 		takeSnapshotBtn = true;
 	}
 
@@ -24,25 +20,26 @@
 		ctx.drawImage(videoEl, 0, 0, canvas.width, canvas.height);
 		const imgUrl = canvas.toDataURL();
 		hiddenInput.value = imgUrl;
+		isCanvasOn = false;
+		stopWebcam();
 	}
 
 	function stopWebcam() {
 		const tracks = mediaStream.getTracks();
 		tracks.forEach((track) => track.stop());
 		videoEl.srcObject = null;
-		isWebcamOn = false;
-		resetBtn = false;
-		activateBtn = true;
+		resetBtn = true;
 		takeSnapshotBtn = false;
 	}
 
 	function resetSnapshot() {
-		if (isWebcamOn) {
-			const canvas = document.querySelector('canvas');
-			const ctx = canvas.getContext('2d');
-			ctx.clearRect(0, 0, canvas.width, canvas.height);
-			hiddenInput.value = '';
-		}
+		const canvas = document.querySelector('canvas');
+		const ctx = canvas.getContext('2d');
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		hiddenInput.value = '';
+		getWebcam();
+		takeSnapshotBtn = true;
+		isCanvasOn = true;
 	}
 
 	onMount(() => {
@@ -51,11 +48,13 @@
 </script>
 
 <div class="d-flex flex-column align-items-center border p-3 rounded-2">
-	<!-- svelte-ignore a11y-media-has-caption -->
-	<video bind:this={videoEl} />
-	<canvas class="d-none" width="320" height="240" />
-	<input type="hidden" bind:this={hiddenInput} />
-	<!-- svelte-ignore a11y-missing-attribute -->
+	<div class="position-relative">
+		<!-- svelte-ignore a11y-media-has-caption -->
+		<video bind:this={videoEl} />
+		<canvas class:d-none={isCanvasOn} class="position-absolute top-50 start-50 translate-middle" />
+		<input type="hidden" bind:this={hiddenInput} />
+		<!-- svelte-ignore a11y-missing-attribute -->
+	</div>
 	<div class="box position-relative">
 		<button
 			class="btn snapshot position-absolute top-50 start-50 translate-middle"
@@ -68,13 +67,9 @@
 	</div>
 </div>
 
-<!-- <button>Take Snapshot</button>
-<button>Reset Snapshot</button> -->
-<!-- <button on:click={stopWebcam}>Stop Webcam</button>
-<button disabled={!activateBtn} on:click={getWebcam}>Aktifkan Kamera</button> -->
-
 <style>
-	video {
+	video,
+	canvas {
 		width: 100%;
 	}
 	.box {
