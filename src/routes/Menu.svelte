@@ -30,7 +30,7 @@
 			{#each icons as icon}
 				<div class="col flex-column d-flex align-items-center">
 					<div class="icon-box border shadow">
-						<img src={icon.img} class="img-fluid" alt="" />
+						<a href="/patroli"><img src={icon.img} class="img-fluid" alt="" /></a>
 					</div>
 					<h6>{icon.name}</h6>
 				</div>
@@ -50,7 +50,7 @@
 		/* height: 100%; */
 		width: 130px;
 		text-align: center;
-        border-radius: 20px 50px;
+		border-radius: 20px 50px;
 	}
 	#menu h6 {
 		font-weight: 300;
