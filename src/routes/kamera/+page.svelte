@@ -1,4 +1,5 @@
 <script>
+	let active = true;
 	let constraints = { video: { facingMode: 'environment' } };
 	let stream;
 
@@ -27,6 +28,16 @@
 		navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
 	}
 
+	function stopCamera() {
+		video.srcObject = null;
+		active = false;
+	}
+
+	function startCamera() {
+		navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
+		active = true;
+	}
+
 	navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
 </script>
 
@@ -34,8 +45,8 @@
 	<!-- svelte-ignore a11y-media-has-caption -->
 	<video id="video" autoplay playsinline bing:this={stream} />
 
-	<button on:click={takeSnapshot}>Take snapshot</button>
-	<button on:click={switchCamera}>Switch Camera</button>
-	<!-- svelte-ignore missing-declaration -->
-	<button on:click={() => (video.srcObject = null)}>Stop Camera</button>
+	<button on:click={takeSnapshot} disabled={!active}>Take snapshot</button>
+	<button on:click={switchCamera} disabled={!active}>Switch Camera</button>
+	<button on:click={stopCamera}>Stop Camera</button>
+	<button on:click={startCamera} disabled={active}>Start Camera</button>
 </section>
