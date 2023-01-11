@@ -54,5 +54,6 @@
 	<button on:click={switchCamera} disabled={!active}>Switch Camera</button>
 	<button on:click={stopCamera}>Stop Camera</button>
 	<button on:click={startCamera} disabled={active}>Start Camera</button>
+	<canvas width="320" height="240" />
 	<input type="hidden" bind:this={hiddenInput} />
 </section>
