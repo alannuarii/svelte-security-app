@@ -35,6 +35,7 @@
 		tracks.forEach(function (track) {
 			track.stop();
 		});
+		videoEl.srcObject = null;
 		active = false;
 	}
 
