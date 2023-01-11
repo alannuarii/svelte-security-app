@@ -4,7 +4,7 @@
 
 <nav class="navbar fixed-bottom">
 	<div class="container position-relative">
-		<a href="/"><i class="camera bi-camera-fill" /></a>
+		<a href="/kamera"><i class="camera bi-camera-fill" /></a>
 		<div
 			class="menu"
 			data-bs-toggle="offcanvas"
