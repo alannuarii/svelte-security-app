@@ -50,7 +50,7 @@
 	});
 </script>
 
-<div class="d-flex flex-column align-items-center border py-3 px-2 rounded-2">
+<div class="d-flex flex-column align-items-center border p-3 rounded-2">
 	<!-- svelte-ignore a11y-media-has-caption -->
 	<video bind:this={videoEl} />
 	<canvas width="320" height="240" />
@@ -65,6 +65,6 @@
 
 <style>
 	video {
-		width: fit-content;
+		width: 100%;
 	}
 </style>
