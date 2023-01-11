@@ -17,7 +17,7 @@
 		<label for="" class="form-label">Lokasi Patroli</label>
 		<input class="form-control" type="text" />
 	</div>
-	<div class="mb-3">
+	<div class="mb-4">
 		<label for="exampleRadios1" class="form-label">Kondisi</label>
 		<div class="form-check">
 			<input
@@ -47,7 +47,6 @@
 			</div>
 		{/if}
 	</div>
-	<div>
-		<Webcam />
-	</div>
+
+	<Webcam />
 </div>

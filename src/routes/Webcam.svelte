@@ -23,7 +23,6 @@
 		const ctx = canvas.getContext('2d');
 		ctx.drawImage(videoEl, 0, 0, canvas.width, canvas.height);
 		const imgUrl = canvas.toDataURL();
-		document.querySelector('img').src = imgUrl;
 		hiddenInput.value = imgUrl;
 	}
 
@@ -39,7 +38,9 @@
 
 	function resetSnapshot() {
 		if (isWebcamOn) {
-			document.querySelector('img').src = '';
+			const canvas = document.querySelector('canvas');
+			const ctx = canvas.getContext('2d');
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			hiddenInput.value = '';
 		}
 	}
@@ -49,13 +50,21 @@
 	});
 </script>
 
+<div class="d-flex flex-column align-items-center border py-3 px-2 rounded-2">
+	<!-- svelte-ignore a11y-media-has-caption -->
+	<video bind:this={videoEl} width="320" height="240" />
+	<canvas width="320" height="240" />
+	<input type="hidden" bind:this={hiddenInput} />
+	<!-- svelte-ignore a11y-missing-attribute -->
+</div>
+
 <button disabled={!takeSnapshotBtn} on:click={takeSnapshot}>Take Snapshot</button>
 <button disabled={!resetBtn} on:click={resetSnapshot}>Reset Snapshot</button>
 <button on:click={stopWebcam}>Stop Webcam</button>
 <button disabled={!activateBtn} on:click={getWebcam}>Aktifkan Kamera</button>
-<!-- svelte-ignore a11y-media-has-caption -->
-<video bind:this={videoEl} width="320" height="240" />
-<canvas width="320" height="240" />
-<!-- svelte-ignore a11y-missing-attribute -->
-<img width="320" height="240" />
-<input type="hidden" bind:this={hiddenInput} />
+
+<style>
+	video {
+		width: fit-content;
+	}
+</style>
