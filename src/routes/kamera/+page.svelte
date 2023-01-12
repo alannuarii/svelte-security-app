@@ -56,7 +56,7 @@
 	</div>
 	<div />
 
-	<div class="row row-cols-3 gy-2 m-3">
+	<div class="row row-cols-3 gy-3 m-3">
 		{#each snapshots as snap}
 			<div class="col">
 				<img class="img-fluid" src={snap} alt="" />
