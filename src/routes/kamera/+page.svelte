@@ -50,7 +50,7 @@
 		<div class="box position-relative">
 			<button
 				class="btn snapshot position-absolute top-50 start-50 translate-middle"
-				don:click={takeSnapshot}><i class="bi-circle-fill text-danger" /></button
+				on:click={takeSnapshot}><i class="bi-circle-fill text-danger" /></button
 			>
 		</div>
 	</div>
@@ -66,13 +66,9 @@
 </section>
 
 <style>
-	video,
-	canvas {
-		width: 100%;
-	}
 	.foto-border {
-		height: 320px;
-		width: 240px;
+		height: 854px;
+		width: 480px;
 	}
 	.box {
 		height: 70px;
