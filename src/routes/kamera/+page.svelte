@@ -67,7 +67,7 @@
 				<img class="img-fluid" src={snap} alt="" />
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
-					class="btn position-absolute top-50 start-50 translate-middle"
+					class="btn position-absolute top-0 start-50 translate-middle"
 					on:click={() => deletePhoto(i)}
 				>
 					<i class="bi-x-circle-fill text-danger" />
@@ -102,8 +102,7 @@
 		cursor: pointer;
 	}
 	.bi-x-circle-fill {
-		font-size: 40px;
-		opacity: 0.7;
+		font-size: 30px;
 	}
 	.snapshot {
 		z-index: 99;
