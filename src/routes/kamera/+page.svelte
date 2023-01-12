@@ -48,7 +48,7 @@
 	<!-- svelte-ignore a11y-media-has-caption -->
 	<video bind:this={videoEl} />
 
-	<!-- <canvas width="240" height="320" /> -->
+	<canvas class="d-none" width="240" height="320" />
 
 	{#each snapshots as snap}
 		<img src={snap} alt="" />
