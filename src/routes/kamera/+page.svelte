@@ -41,8 +41,8 @@
 </script>
 
 <section>
-	<div class="d-flex flex-column align-items-center border p-3 rounded-2">
-		<div class="foto-border">
+	<div class="d-flex flex-column align-items-center border p-3 m-3 rounded-2">
+		<div class="foto-border d-flex justify-content-center">
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video bind:this={videoEl} />
 			<canvas class="d-none" width="240" height="320" />
@@ -70,7 +70,7 @@
 		width: 100%;
 	}
 	video {
-		width: 80%;
+		width: 85%;
 	}
 	.box {
 		height: 70px;
