@@ -41,7 +41,7 @@
 </script>
 
 <section>
-	<div class="d-flex flex-column align-items-center border p-3 m-3 rounded-2">
+	<div class="d-flex flex-column align-items-center border p-3 m-3 rounded-2 overflow-y-hidden">
 		<div class="foto-border d-flex justify-content-center p-2">
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video bind:this={videoEl} />
@@ -56,7 +56,7 @@
 	</div>
 	<div />
 
-	<div class="row row-cols-2 gy-4 mx-3">
+	<div class="row row-cols-2 gy-4 m-3">
 		{#each snapshots as snap}
 			<div class="col">
 				<img class="img-fluid" src={snap} alt="" />
