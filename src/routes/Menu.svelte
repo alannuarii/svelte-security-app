@@ -7,19 +7,23 @@
 	const icons = [
 		{
 			img: guestbook,
-			name: 'Buku Tamu'
+			name: 'Buku Tamu',
+			path: '/buku-tamu'
 		},
 		{
 			img: patrol,
-			name: 'Patroli'
+			name: 'Patroli',
+			path: '/patroli'
 		},
 		{
 			img: apel,
-			name: 'Apel'
+			name: 'Apel',
+			path: '/apel'
 		},
 		{
 			img: cctv,
-			name: 'CCTV'
+			name: 'CCTV',
+			path: '/cctv'
 		}
 	];
 </script>
@@ -30,7 +34,7 @@
 			{#each icons as icon}
 				<div class="col flex-column d-flex align-items-center">
 					<div class="icon-box border shadow">
-						<a href="/patroli"><img src={icon.img} class="img-fluid" alt="" /></a>
+						<a href={icon.path}><img src={icon.img} class="img-fluid" alt="" /></a>
 					</div>
 					<h6>{icon.name}</h6>
 				</div>
