@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	let mediaStream;
 	let videoEl;
-	let currentFacingMode = 'environment';
+	let currentFacingMode = 'user';
 	let snapshots = [];
 
 	async function getWebcam() {
@@ -31,6 +31,11 @@
 		videoEl.srcObject = null;
 	}
 
+	function deletePhoto(index) {
+		snapshots.splice(index, 1);
+		snapshots = [...snapshots];
+	}
+
 	//Event onMount and onDestroy
 	onMount(() => {
 		getWebcam();
@@ -57,9 +62,16 @@
 	<div />
 
 	<div class="row row-cols-3 gy-4 m-3">
-		{#each snapshots as snap}
-			<div class="col">
+		{#each snapshots as snap, i}
+			<div class="col position-relative">
 				<img class="img-fluid" src={snap} alt="" />
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<div
+					class="btn position-absolute top-50 start-50 translate-middle"
+					on:click={() => deletePhoto(i)}
+				>
+					<i class="bi-x-circle-fill text-danger" />
+				</div>
 			</div>
 		{/each}
 	</div>
@@ -89,7 +101,14 @@
 		font-size: 50px;
 		cursor: pointer;
 	}
+	.bi-x-circle-fill {
+		font-size: 40px;
+		opacity: 0.7;
+	}
 	.snapshot {
 		z-index: 99;
+	}
+	img {
+		opacity: 0.9;
 	}
 </style>
