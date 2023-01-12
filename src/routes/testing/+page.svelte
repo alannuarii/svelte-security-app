@@ -1,12 +1,11 @@
 <script>
 	let numbers = [];
 
-	console.log(numbers);
-
 	const tambah = () => {
-		numbers.push(1);
-		numbers = numbers;
+		numbers = [...numbers, 1];
 	};
+
+	$: console.log(numbers);
 </script>
 
 <button on:click={tambah}> Clicked </button>

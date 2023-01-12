@@ -21,8 +21,8 @@
 		// document.querySelector('img').src = imgUrl;
 
 		// add snapshot to the array
-		snapshots.push(imgUrl.length);
-		snapshots = snapshots;
+		// snapshots.push(imgUrl.length);
+		snapshots = [...snapshots, imgUrl];
 	}
 
 	function stopWebcam() {
@@ -30,6 +30,8 @@
 		tracks.forEach((track) => track.stop());
 		videoEl.srcObject = null;
 	}
+
+	$: console.log(snapshots);
 
 	//Event onMount and onDestroy
 	onMount(() => {
@@ -48,7 +50,9 @@
 
 	<canvas width="240" height="320" />
 
-	<h1>{snapshots.length}</h1>
+	{#each snapshots as snap}
+		<img src={snap} alt="" />
+	{/each}
 </section>
 
 <style>
