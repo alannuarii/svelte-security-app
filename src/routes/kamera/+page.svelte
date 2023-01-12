@@ -69,6 +69,9 @@
 	.foto-border {
 		width: 100%;
 	}
+	video {
+		width: 80%;
+	}
 	.box {
 		height: 70px;
 		width: 70px;
