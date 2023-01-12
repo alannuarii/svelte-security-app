@@ -54,7 +54,7 @@
 		<canvas
 			class:d-none={isCanvasOn}
 			width="240"
-			height="230"
+			height="320"
 			class="position-absolute top-50 start-50 translate-middle"
 		/>
 		<input type="hidden" bind:this={hiddenInput} />
