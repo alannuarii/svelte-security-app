@@ -42,7 +42,7 @@
 
 <section>
 	<div class="d-flex flex-column align-items-center border p-3 rounded-2">
-		<div class="position-relative foto-border">
+		<div class="foto-border">
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video bind:this={videoEl} />
 			<canvas class="d-none" width="240" height="320" />
@@ -59,7 +59,7 @@
 	<div class="row row-cols-2 gy-4">
 		{#each snapshots as snap}
 			<div class="col">
-				<img src={snap} alt="" />
+				<img class="img-fluid" src={snap} alt="" />
 			</div>
 		{/each}
 	</div>
@@ -67,8 +67,7 @@
 
 <style>
 	.foto-border {
-		height: 854px;
-		width: 480px;
+		width: 100%;
 	}
 	.box {
 		height: 70px;
