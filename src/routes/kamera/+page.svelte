@@ -3,7 +3,7 @@
 	let mediaStream;
 	let videoEl;
 	let currentFacingMode = 'environment';
-	$: snapshots = [];
+	let snapshots = [];
 
 	async function getWebcam() {
 		mediaStream = await navigator.mediaDevices.getUserMedia({
@@ -22,6 +22,7 @@
 
 		// add snapshot to the array
 		snapshots.push(imgUrl.length);
+		snapshots = snapshots;
 	}
 
 	function stopWebcam() {
@@ -47,9 +48,7 @@
 
 	<canvas width="240" height="320" />
 
-	{#each snapshots as snap, i}
-		<h6>{i}</h6>
-	{/each}
+	<h1>{snapshots.length}</h1>
 </section>
 
 <style>
