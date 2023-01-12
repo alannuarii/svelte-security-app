@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	let mediaStream;
 	let videoEl;
 	let hiddenInput;
@@ -46,6 +46,10 @@
 	onMount(() => {
 		getWebcam();
 	});
+
+	onDestroy(() => {
+		stopWebcam();
+	});
 </script>
 
 <div class="d-flex flex-column align-items-center border p-3 rounded-2">
@@ -67,9 +71,7 @@
 			disabled={!takeSnapshotBtn}
 			on:click={takeSnapshot}><i class="bi-circle-fill text-danger" /></button
 		>
-		<button class="btn reset px-3 py-1" disabled={!resetBtn} on:click={resetSnapshot}
-			>Reset</button
-		>
+		<button class="btn reset px-3 py-1" disabled={!resetBtn} on:click={resetSnapshot}>Reset</button>
 	</div>
 </div>
 

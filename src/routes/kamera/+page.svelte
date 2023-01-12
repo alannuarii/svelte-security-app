@@ -1,52 +1,56 @@
 <script>
-	let active = true;
-	let constraints = { video: { facingMode: 'environment' } };
-	let stream;
+	import { onMount, onDestroy } from 'svelte';
+	let mediaStream;
+	let videoEl;
+	let currentFacingMode = 'environtment';
+	$: snapshots = [];
 
-	function handleSuccess(stream) {
-		video.srcObject = stream;
-	}
-
-	function handleError(error) {
-		console.log('navigator.getUserMedia error: ', error);
+	async function getWebcam() {
+		mediaStream = await navigator.mediaDevices.getUserMedia({
+			video: { facingMode: { exact: currentFacingMode } }
+		});
+		videoEl.srcObject = mediaStream;
+		videoEl.play();
 	}
 
 	function takeSnapshot() {
-		let canvas = document.createElement('canvas');
-		canvas.width = video.videoWidth;
-		canvas.height = video.videoHeight;
-		canvas.getContext('2d').drawImage(video, 0, 0);
-		// you can now save the image from the canvas
+		const canvas = document.querySelector('canvas');
+		const ctx = canvas.getContext('2d');
+		ctx.drawImage(videoEl, 0, 0, canvas.width, canvas.height);
+		const imgUrl = canvas.toDataURL();
+		// document.querySelector('img').src = imgUrl;
+
+		// add snapshot to the array
+		snapshots.push(imgUrl.length);
 	}
 
-	function switchCamera() {
-		if (constraints.video.facingMode === 'environment') {
-			constraints.video.facingMode = 'user';
-		} else {
-			constraints.video.facingMode = 'environment';
-		}
-		navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
+	function stopWebcam() {
+		const tracks = videoEl.srcObject.getTracks();
+		tracks.forEach((track) => track.stop());
+		videoEl.srcObject = null;
 	}
 
-	function stopCamera() {
-		video.srcObject = null;
-		active = false;
-	}
-
-	function startCamera() {
-		navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
-		active = true;
-	}
-
-	navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
+	//Event onMount and onDestroy
+	onMount(() => {
+		getWebcam();
+	});
+	onDestroy(() => {
+		stopWebcam();
+	});
 </script>
 
-<section id="camera" class="p-3">
-	<!-- svelte-ignore a11y-media-has-caption -->
-	<video id="video" autoplay playsinline bing:this={stream} />
+<section>
+	<button on:click={takeSnapshot}>Take Snapshot</button>
 
-	<button on:click={takeSnapshot} disabled={!active}>Take snapshot</button>
-	<button on:click={switchCamera} disabled={!active}>Switch Camera</button>
-	<button on:click={stopCamera}>Stop Camera</button>
-	<button on:click={startCamera} disabled={active}>Start Camera</button>
+	<!-- svelte-ignore a11y-media-has-caption -->
+	<video bind:this={videoEl} />
+
+	<canvas width="240" height="320" />
+
+	{#each snapshots as snap, i}
+		<h6>{i}</h6>
+	{/each}
 </section>
+
+<style>
+</style>
