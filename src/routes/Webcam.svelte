@@ -48,7 +48,7 @@
 </script>
 
 <div class="d-flex flex-column align-items-center border p-3 rounded-2">
-	<div class="position-relative">
+	<div class="position-relative foto-border">
 		<!-- svelte-ignore a11y-media-has-caption -->
 		<video bind:this={videoEl} />
 		<canvas
@@ -76,6 +76,10 @@
 	video,
 	canvas {
 		width: 100%;
+	}
+	.foto-border{
+		height: 320px;
+		width: 240px;
 	}
 	.box {
 		height: 70px;
