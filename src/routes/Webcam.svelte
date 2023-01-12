@@ -67,7 +67,7 @@
 			disabled={!takeSnapshotBtn}
 			on:click={takeSnapshot}><i class="bi-circle-fill text-danger" /></button
 		>
-		<button class="btn reset ps-4 pe-2 py-1" disabled={!resetBtn} on:click={resetSnapshot}
+		<button class="btn reset px-3 py-1" disabled={!resetBtn} on:click={resetSnapshot}
 			>Reset</button
 		>
 	</div>
@@ -104,8 +104,10 @@
 	}
 	.reset {
 		position: absolute;
-		left: 70%;
-		top: 35%;
+		left: 140%;
+		top: 50%;
+		transform: translate(-50%, -45%);
 		border: 1px solid var(--color-text-1);
+		border-radius: 20px 10px 10px 20px;
 	}
 </style>
