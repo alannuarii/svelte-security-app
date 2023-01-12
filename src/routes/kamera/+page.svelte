@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	let mediaStream;
 	let videoEl;
-	let currentFacingMode = 'environtment';
+	let currentFacingMode = 'environment';
 	$: snapshots = [];
 
 	async function getWebcam() {
