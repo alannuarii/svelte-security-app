@@ -42,7 +42,7 @@
 
 <section>
 	<div class="d-flex flex-column align-items-center border p-3 m-3 rounded-2">
-		<div class="foto-border d-flex justify-content-center">
+		<div class="foto-border d-flex justify-content-center p-2">
 			<!-- svelte-ignore a11y-media-has-caption -->
 			<video bind:this={videoEl} />
 			<canvas class="d-none" width="240" height="320" />
@@ -56,7 +56,7 @@
 	</div>
 	<div />
 
-	<div class="row row-cols-2 gy-4">
+	<div class="row row-cols-2 gy-4 mx-3">
 		{#each snapshots as snap}
 			<div class="col">
 				<img class="img-fluid" src={snap} alt="" />
@@ -70,7 +70,7 @@
 		width: 100%;
 	}
 	video {
-		width: 85%;
+		width: 100%;
 	}
 	.box {
 		height: 70px;
