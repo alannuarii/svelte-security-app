@@ -51,7 +51,12 @@
 	<div class="position-relative">
 		<!-- svelte-ignore a11y-media-has-caption -->
 		<video bind:this={videoEl} />
-		<canvas class:d-none={isCanvasOn} class="position-absolute top-50 start-50 translate-middle" />
+		<canvas
+			class:d-none={isCanvasOn}
+			width="240"
+			height="230"
+			class="position-absolute top-50 start-50 translate-middle"
+		/>
 		<input type="hidden" bind:this={hiddenInput} />
 		<!-- svelte-ignore a11y-missing-attribute -->
 	</div>
