@@ -40,6 +40,7 @@
 		getWebcam();
 		takeSnapshotBtn = true;
 		isCanvasOn = true;
+		resetBtn = false;
 	}
 
 	onMount(() => {
@@ -77,7 +78,7 @@
 	canvas {
 		width: 100%;
 	}
-	.foto-border{
+	.foto-border {
 		height: 320px;
 		width: 240px;
 	}
