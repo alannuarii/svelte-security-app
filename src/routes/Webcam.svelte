@@ -106,7 +106,7 @@
 		position: absolute;
 		left: 140%;
 		top: 50%;
-		transform: translate(-50%, -45%);
+		transform: translate(-50%, -50%);
 		border: 1px solid var(--color-text-1);
 		border-radius: 20px 10px 10px 20px;
 	}
