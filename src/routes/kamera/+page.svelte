@@ -31,8 +31,6 @@
 		videoEl.srcObject = null;
 	}
 
-	$: console.log(snapshots);
-
 	//Event onMount and onDestroy
 	onMount(() => {
 		getWebcam();
@@ -43,17 +41,57 @@
 </script>
 
 <section>
-	<button on:click={takeSnapshot}>Take Snapshot</button>
+	<div class="d-flex flex-column align-items-center border p-3 rounded-2">
+		<div class="position-relative foto-border">
+			<!-- svelte-ignore a11y-media-has-caption -->
+			<video bind:this={videoEl} />
+			<canvas class="d-none" width="240" height="320" />
+		</div>
+		<div class="box position-relative">
+			<button
+				class="btn snapshot position-absolute top-50 start-50 translate-middle"
+				don:click={takeSnapshot}><i class="bi-circle-fill text-danger" /></button
+			>
+		</div>
+	</div>
+	<div />
 
-	<!-- svelte-ignore a11y-media-has-caption -->
-	<video bind:this={videoEl} />
-
-	<canvas class="d-none" width="240" height="320" />
-
-	{#each snapshots as snap}
-		<img src={snap} alt="" />
-	{/each}
+	<div class="row row-cols-2 gy-4">
+		{#each snapshots as snap}
+			<div class="col">
+				<img src={snap} alt="" />
+			</div>
+		{/each}
+	</div>
 </section>
 
 <style>
+	video,
+	canvas {
+		width: 100%;
+	}
+	.foto-border {
+		height: 320px;
+		width: 240px;
+	}
+	.box {
+		height: 70px;
+		width: 70px;
+	}
+	.btn {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+	}
+	.bi-circle-fill {
+		font-size: 50px;
+		cursor: pointer;
+	}
+	.snapshot {
+		z-index: 99;
+	}
 </style>
