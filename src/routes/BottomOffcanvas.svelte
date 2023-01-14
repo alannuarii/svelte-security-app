@@ -47,7 +47,7 @@
 <style>
 	a {
 		text-decoration: none;
-		font-size: 20px;
+		font-size: 17px;
 	}
 	.offcanvas {
 		border-radius: 20px 20px 0 0;
