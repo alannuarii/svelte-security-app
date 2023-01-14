@@ -1,10 +1,13 @@
 <script>
-	import logo from '../lib/img/shield.png';
 	import ShiftDrodown from './ShiftDrodown.svelte';
 	import ModalLogout from './ModalLogout.svelte';
 	import { page } from '$app/stores';
 
 	$: path = $page.url.pathname;
+
+	function refresh() {
+		window.location.reload();
+	}
 </script>
 
 <nav class="navbar">
@@ -26,6 +29,8 @@
 			<a class="navbar-brand flex-grow-1" href="/">
 				<h5><i class="bi-arrow-left me-2" /> Security App</h5>
 			</a>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<div on:click={refresh}><i class="bi-arrow-clockwise" /></div>
 		{/if}
 	</div>
 </nav>

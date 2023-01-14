@@ -7,17 +7,17 @@
 		},
 		{
 			name: 'Laporan Patroli',
-			path: '/laporan-patroli',
+			path: '/patroli/laporan',
 			icon: 'bi-arrow-repeat'
 		},
 		{
 			name: 'Laporan Apel',
-			path: '/laporan-apel',
+			path: '/apel/laporan',
 			icon: 'bi-people'
 		},
 		{
 			name: 'Laporan CCTV',
-			path: '/laporan-cctv',
+			path: '/cctv/laporan',
 			icon: 'bi-camera-video'
 		}
 	];
