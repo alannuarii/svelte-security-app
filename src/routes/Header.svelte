@@ -2,22 +2,31 @@
 	import logo from '../lib/img/shield.png';
 	import ShiftDrodown from './ShiftDrodown.svelte';
 	import ModalLogout from './ModalLogout.svelte';
+	import { page } from '$app/stores';
+
+	$: path = $page.url.pathname;
 </script>
 
 <nav class="navbar">
 	<div class="container d-flex">
-		<a class="navbar-brand flex-grow-1" href="/">
-			<h5>SecurityApp</h5>
-		</a>
-		<div class="dropdown">
-			<i class="bi-people me-4 " data-bs-toggle="dropdown" />
-			<ShiftDrodown />
-		</div>
+		{#if path === '/'}
+			<a class="navbar-brand flex-grow-1" href="/">
+				<h5>SecurityApp</h5>
+			</a>
+			<div class="dropdown">
+				<i class="bi-people me-4 " data-bs-toggle="dropdown" />
+				<ShiftDrodown />
+			</div>
 
-		<a href="/"
-			><i class="bi-box-arrow-right" data-bs-toggle="modal" data-bs-target="#modalLogout" /></a
-		>
-		<ModalLogout />
+			<a href="/"
+				><i class="bi-box-arrow-right" data-bs-toggle="modal" data-bs-target="#modalLogout" /></a
+			>
+			<ModalLogout />
+		{:else}
+			<a class="navbar-brand flex-grow-1" href="/">
+				<h5><i class="bi-arrow-left me-2" /> Security App</h5>
+			</a>
+		{/if}
 	</div>
 </nav>
 
