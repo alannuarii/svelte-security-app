@@ -1,3 +1,28 @@
+<script>
+	const menus = [
+		{
+			name: 'Jadwal Piket',
+			path: '/jadwal-piket',
+			icon: 'bi-calendar3'
+		},
+		{
+			name: 'Laporan Patroli',
+			path: '/laporan-patroli',
+			icon: 'bi-arrow-repeat'
+		},
+		{
+			name: 'Laporan Apel',
+			path: '/laporan-apel',
+			icon: 'bi-people'
+		},
+		{
+			name: 'Laporan CCTV',
+			path: '/laporan-cctv',
+			icon: 'bi-camera-video'
+		}
+	];
+</script>
+
 <div
 	class="offcanvas offcanvas-bottom"
 	tabindex="-1"
@@ -10,21 +35,11 @@
 	</div>
 	<div class="offcanvas-body small">
 		<div class="list-group list-group-flush">
-			<a href="/" class="list-group-item list-group-item-action"
-				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
-			>
-			<a href="/" class="list-group-item list-group-item-action"
-				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
-			>
-			<a href="/" class="list-group-item list-group-item-action"
-				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
-			>
-			<a href="/" class="list-group-item list-group-item-action"
-				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
-			>
-			<a href="/" class="list-group-item list-group-item-action"
-				><i class="bi-calendar3 me-2" /> Jadwal Piket</a
-			>
+			{#each menus as menu}
+				<a href={menu.path} class="list-group-item list-group-item-action"
+					><i class="{menu.icon} me-2" /> {menu.name}</a
+				>
+			{/each}
 		</div>
 	</div>
 </div>
