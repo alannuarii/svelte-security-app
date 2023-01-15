@@ -20,10 +20,16 @@
 			hours: ['16:00 – 18:59', '19:00 – 21:59', '22:00 – 23:59']
 		}
 	];
+
+	let tanggal = '';
+
+	function handleEvent(event) {
+		tanggal = event.detail
+	}
 </script>
 
 <section class="p-3 text-center">
-	<TitleDate title={'patroli'} />
+	<TitleDate title={'patroli'} on:tanggal={handleEvent} />
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	{#each shifts as shift}
 		<div class="mb-2">
@@ -33,7 +39,7 @@
 			<div class="collapse mb-3" id={shift.waktu}>
 				<div class="list-group">
 					{#each shift.hours as hour}
-						<a href="/" class="list-group-item list-group-item-action p-3">Pukul {hour} WITA</a>
+						<a href="/patroli/laporan/{tanggal}" class="list-group-item list-group-item-action p-3">Pukul {hour} WITA</a>
 					{/each}
 				</div>
 			</div>

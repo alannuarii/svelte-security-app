@@ -1,14 +1,24 @@
 <script>
 	export let title;
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	let tanggal = '';
+
+	function selectDate(event) {
+		tanggal = event.target.value;
+		dispatch('tanggal', tanggal);
+	}
 </script>
 
 <div class="mb-4">
 	<h3>LAPORAN {title.toUpperCase()}</h3>
-	<h5><i class="bi-calendar3 me-2" /> Minggu, 15 Januari 2023</h5>
+	<h5><i class="bi-calendar3 me-2" /> {tanggal}</h5>
 </div>
 <form action="" class="mb-4">
 	<h6>Masukkan tanggal {title}</h6>
-	<input type="date" class="form-control" />
+	<input type="date" class="form-control" on:change={selectDate} />
 </form>
 
 <style>
