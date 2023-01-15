@@ -61,7 +61,7 @@
 	</div>
 	<div />
 
-	<div class="row row-cols-3 gy-4 my-3">
+	<div class="row row-cols-3 gy-4 m-3">
 		{#each snapshots as snap, i}
 			<div class="col position-relative">
 				<img class="img-fluid" src={snap} alt="" />
