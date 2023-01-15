@@ -1,6 +1,6 @@
 <script>
 	import Laporan from '../../Laporan.svelte';
-	// import TitleDate from '../../TitleDate.svelte';
+	import TitleDate from '../../TitleDate.svelte';
 
 	const shifts = [
 		{
@@ -22,7 +22,7 @@
 </script>
 
 <section class="p-3 text-center">
-	<!-- <TitleDate title={'pemantauan CCTV'} /> -->
+	<TitleDate title={'pemantauan CCTV'} />
 	{#each shifts as shift}
 		<Laporan path={shift.path} icon={shift.icon} waktu={shift.waktu} />
 	{/each}

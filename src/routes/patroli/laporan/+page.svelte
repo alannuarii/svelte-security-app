@@ -1,5 +1,5 @@
 <script>
-	// import TitleDate from '../../TitleDate.svelte';
+	import TitleDate from '../../TitleDate.svelte';
 	const shifts = [
 		{
 			waktu: 'Malam',
@@ -23,7 +23,7 @@
 </script>
 
 <section class="p-3 text-center">
-	<!-- <TitleDate title={'patroli'} /> -->
+	<TitleDate title={'patroli'} />
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	{#each shifts as shift}
 		<div class="mb-2">
