@@ -45,7 +45,7 @@
 	});
 </script>
 
-<section>
+<section class="overflow-auto">
 	<div class="d-flex flex-column align-items-center border p-3 m-3 rounded-2">
 		<div class="foto-border d-flex justify-content-center p-2">
 			<!-- svelte-ignore a11y-media-has-caption -->
