@@ -19,6 +19,11 @@
 			name: 'Laporan CCTV',
 			path: '/cctv/laporan',
 			icon: 'bi-camera-video'
+		},
+		{
+			name: 'Data Tamu',
+			path: '/buku-tamu/rekap',
+			icon: 'bi-person-square'
 		}
 	];
 </script>
