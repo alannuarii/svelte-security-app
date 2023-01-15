@@ -1,4 +1,5 @@
 <script>
+	import TitleDate from '../../TitleDate.svelte';
 	const shifts = [
 		{
 			waktu: 'Malam',
@@ -22,14 +23,7 @@
 </script>
 
 <section class="p-3 text-center">
-	<div class="mb-4">
-		<h3>LAPORAN PATROLI</h3>
-		<h5><i class="bi-calendar3 me-2" /> Minggu, 15 Januari 2023</h5>
-	</div>
-	<form action="" class="mb-4">
-		<h6>Masukkan tanggal patroli</h6>
-		<input type="date" class="form-control" />
-	</form>
+	<TitleDate title={'patroli'} />
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	{#each shifts as shift}
 		<div class="mb-2">
@@ -48,17 +42,6 @@
 </section>
 
 <style>
-	h3 {
-		color: var(--color-theme-1);
-		font-weight: 900;
-	}
-	h5 {
-		font-size: 18px;
-		color: var(--color-theme-2);
-	}
-	h6 {
-		font-weight: 300;
-	}
 	.shift {
 		font-size: 18px;
 		font-weight: 700;

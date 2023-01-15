@@ -1,0 +1,26 @@
+<script>
+	export let title;
+</script>
+
+<div class="mb-4">
+	<h3>LAPORAN {title.toUpperCase()}</h3>
+	<h5><i class="bi-calendar3 me-2" /> Minggu, 15 Januari 2023</h5>
+</div>
+<form action="" class="mb-4">
+	<h6>Masukkan tanggal {title}</h6>
+	<input type="date" class="form-control" />
+</form>
+
+<style>
+	h3 {
+		color: var(--color-theme-1);
+		font-weight: 900;
+	}
+	h5 {
+		font-size: 18px;
+		color: var(--color-theme-2);
+	}
+	h6 {
+		font-weight: 300;
+	}
+</style>
