@@ -1,8 +1,6 @@
 <script>
 	import './styles.css';
 	import Header from './Header.svelte';
-
-
 </script>
 
 <div id="master">
@@ -15,5 +13,6 @@
 <style>
 	#master {
 		overflow-x: hidden;
+		overflow-y: auto;
 	}
 </style>
