@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="px-2 text-center">
-		<label for="" class="mb-1">Dokumentasi</label>
+		<label for="" class="mb-1 doc">Dokumentasi</label>
 		{#each photos as photo}
 			<img src={photo} class="img-fluid mb-2 rounded-4" alt="" />
 		{/each}
@@ -50,5 +50,10 @@
 	}
 	h6 {
 		font-weight: 600;
+	}
+	.doc {
+		color: var(--color-theme-1);
+		font-weight: 700;
+        font-size: 20px;
 	}
 </style>
