@@ -10,6 +10,6 @@
 	--color-text-2: #ffffff;
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
+
+	scroll-behavior: smooth;
 }
-
-
