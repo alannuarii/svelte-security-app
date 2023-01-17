@@ -1,10 +1,12 @@
 <script>
 	export let title;
 	import { createEventDispatcher } from 'svelte';
+	import { waktu } from '../lib/js/tanggal';
 
 	const dispatch = createEventDispatcher();
 
-	let tanggal = '';
+	const today = new Date().toISOString().slice(0, 10);
+	let tanggal = today;
 
 	function selectDate(event) {
 		tanggal = event.target.value;
@@ -14,7 +16,7 @@
 
 <div class="mb-4">
 	<h3>LAPORAN {title.toUpperCase()}</h3>
-	<h5><i class="bi-calendar3 me-2" /> {tanggal}</h5>
+	<h5><i class="bi-calendar3 me-2" /> {waktu(tanggal)}</h5>
 </div>
 <form action="" class="mb-4">
 	<h6>Masukkan tanggal {title}</h6>

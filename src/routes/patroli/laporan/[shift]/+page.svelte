@@ -3,6 +3,11 @@
 	import xx from '../../../../lib/img/xx.jpeg';
 	import xxx from '../../../../lib/img/xxx.jpeg';
 	import xxxx from '../../../../lib/img/xxxx.jpeg';
+	import { waktu } from '../../../../lib/js/tanggal';
+
+	export let data;
+
+	const tanggal = waktu(data.tanggal.shift)
 
 	const photos = [xx, xxx, xxxx];
 </script>
@@ -10,7 +15,7 @@
 <section class="p-3">
 	<div class="text-center mb-4">
 		<h3>LAPORAN PATROLI</h3>
-		<h5>Selasa, 17 Januari 2023 Pukul 08.00</h5>
+		<h5>{tanggal} Pukul 08.00</h5>
 	</div>
 	<div class="px-3 mb-4">
 		<div class="mb-3">
@@ -54,6 +59,6 @@
 	.doc {
 		color: var(--color-theme-1);
 		font-weight: 700;
-        font-size: 20px;
+		font-size: 20px;
 	}
 </style>
