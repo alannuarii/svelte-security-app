@@ -1,8 +1,8 @@
 <script>
 	import alan from '../../../../lib/img/Alan Nuari.jpg';
 	import xx from '../../../../lib/img/xx.jpeg';
-	import xxx from '../../../../lib/img/xx.jpeg';
-	import xxxx from '../../../../lib/img/xx.jpeg';
+	import xxx from '../../../../lib/img/xxx.jpeg';
+	import xxxx from '../../../../lib/img/xxxx.jpeg';
 
 	const photos = [xx, xxx, xxxx];
 </script>
