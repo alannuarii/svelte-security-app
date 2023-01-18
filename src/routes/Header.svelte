@@ -27,7 +27,7 @@
 			<ModalLogout />
 		{:else}
 			<a class="navbar-brand flex-grow-1" href="/">
-				<h5><i class="bi-arrow-left me-2" /> Security App</h5>
+				<h5><i class="bi-arrow-left me-2" /> SecurityApp</h5>
 			</a>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div on:click={refresh}><i class="bi-arrow-clockwise" /></div>
