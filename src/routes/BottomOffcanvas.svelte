@@ -21,8 +21,8 @@
 			icon: 'bi-camera-video'
 		},
 		{
-			name: 'Data Tamu',
-			path: '/buku-tamu/rekap',
+			name: 'Laporan Penerimaan Tamu',
+			path: '/buku-tamu/laporan',
 			icon: 'bi-person-square'
 		}
 	];
