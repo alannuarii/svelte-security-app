@@ -1,7 +1,7 @@
 <script>
-	import Menu from './Menu.svelte';
-	import Info from './Info.svelte';
-	import Bottom from './Bottom.svelte';
+	import Menu from './components/Menu.svelte'
+	import Info from './components/Info.svelte'
+	import Bottom from './components/Bottom.svelte'
 </script>
 
 <svelte:head>

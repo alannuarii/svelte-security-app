@@ -1,6 +1,6 @@
 <script>
-	import Laporan from '../../Laporan.svelte';
-	import TitleDate from '../../TitleDate.svelte';
+	import Laporan from '../../components/Laporan.svelte'
+	import TitleDate from '../../components/TitleDate.svelte'
 
 	const shifts = [
 		{

@@ -1,5 +1,5 @@
 <script>
-	import TitleDate from '../../TitleDate.svelte';
+	import TitleDate from '../../components/TitleDate.svelte'
 	const shifts = [
 		{
 			waktu: 'Malam',

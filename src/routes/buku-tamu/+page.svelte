@@ -1,6 +1,6 @@
 <script>
-	import Webcam from '../Webcam.svelte';
-	import Buttons from '../Buttons.svelte';
+	import Webcam from '../components/Webcam.svelte'
+	import Buttons from '../components/Buttons.svelte'
 
 	let kondisi = false;
 	const button = {

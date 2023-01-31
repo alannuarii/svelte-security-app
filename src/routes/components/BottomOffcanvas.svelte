@@ -2,7 +2,7 @@
 	const menus = [
 		{
 			name: 'Jadwal Piket',
-			path: '/jadwal-piket',
+			path: '/jadwal',
 			icon: 'bi-calendar3'
 		},
 		{

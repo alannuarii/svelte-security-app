@@ -1,8 +1,8 @@
 <script>
-	import guestbook from '../lib/img/guestbook.png';
-	import patrol from '../lib/img/patrol.png';
-	import apel from '../lib/img/apel.png';
-	import cctv from '../lib/img/cctv.png';
+	import guestbook from '../../lib/img/guestbook.png';
+	import patrol from '../../lib/img/patrol.png';
+	import apel from '../../lib/img/apel.png';
+	import cctv from '../../lib/img/cctv.png';
 
 	const icons = [
 		{

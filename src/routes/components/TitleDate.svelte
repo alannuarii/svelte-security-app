@@ -1,7 +1,7 @@
 <script>
 	export let title;
 	import { createEventDispatcher } from 'svelte';
-	import { waktu } from '../lib/js/tanggal';
+	import { waktu } from '../../lib/js/tanggal';
 
 	const dispatch = createEventDispatcher();
 
@@ -15,7 +15,7 @@
 </script>
 
 <div class="mb-4">
-	<h3>LAPORAN {title.toUpperCase()}</h3>
+	<h3>{title.toUpperCase()}</h3>
 	<h5><i class="bi-calendar3 me-2" /> {waktu(tanggal)}</h5>
 </div>
 <form action="" class="mb-4">

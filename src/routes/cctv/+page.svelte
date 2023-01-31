@@ -1,5 +1,5 @@
 <script>
-	import Buttons from "../Buttons.svelte";
+	import Buttons from '../components/Buttons.svelte'
 	let kondisi = false;
 	let lokasi = false;
 
