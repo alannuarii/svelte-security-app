@@ -4,7 +4,7 @@
 	export let waktu;
 </script>
 
-<div class="mb-2 border p-4 ">
+<div class="mb-2 border shadow-sm p-4 ">
 	<a href={path} class="shift">
 		<i class="{icon} me-2" />Shift {waktu}
 	</a>

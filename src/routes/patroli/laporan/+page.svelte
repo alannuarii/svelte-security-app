@@ -33,7 +33,7 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	{#each shifts as shift}
 		<div class="mb-2">
-			<div class="border p-4 shift" data-bs-toggle="collapse" data-bs-target="#{shift.waktu}">
+			<div class="border shadow-sm p-4 shift" data-bs-toggle="collapse" data-bs-target="#{shift.waktu}">
 				<i class="{shift.icon} me-2" />Shift {shift.waktu}
 			</div>
 			<div class="collapse mb-3" id={shift.waktu}>
