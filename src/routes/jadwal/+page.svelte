@@ -18,7 +18,7 @@
 		<div class="border p-2 mb-2">
 			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
 		</div>
-		<div class="border p-3">
+		<div class="border p-2">
 			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 		<div class="border p-2 mb-2">
 			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
 		</div>
-		<div class="border p-3">
+		<div class="border p-2">
 			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
 		</div>
 	</div>
@@ -36,7 +36,7 @@
 		<div class="border p-2 mb-2">
 			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
 		</div>
-		<div class="border p-3">
+		<div class="border p-2">
 			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
 		</div>
 	</div>
