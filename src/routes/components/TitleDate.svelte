@@ -14,11 +14,11 @@
 	}
 </script>
 
-<div class="mb-4">
+<div class="mb-4 text-center">
 	<h3>{title.toUpperCase()}</h3>
 	<h5><i class="bi-calendar3 me-2" /> {waktu(tanggal)}</h5>
 </div>
-<form action="" class="mb-4">
+<form action="" class="mb-4 text-center">
 	<h6>Masukkan tanggal {title}</h6>
 	<input type="date" class="form-control" on:change={selectDate} />
 </form>

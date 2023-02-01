@@ -2,7 +2,6 @@
 	import TitleDate from '../components/TitleDate.svelte';
 	import { jadwalPiket } from '../../lib/js/jadwal';
 
-
 	let tanggal = new Date().toISOString().slice(0, 10);
 
 	function handleEvent(event) {
@@ -12,6 +11,39 @@
 	$: console.log(jadwalPiket(tanggal));
 </script>
 
-<section class="p-3 text-center">
+<section class="p-3">
 	<TitleDate title={'jadwal piket'} on:tanggal={handleEvent} />
+	<div class="border p-4 text-center mb-3">
+		<h6 class="mb-3"><i class="bi-moon-stars me-2" /> Piket Malam</h6>
+		<div class="border p-3 mb-2">
+			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
+		</div>
+		<div class="border p-3">
+			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
+		</div>
+	</div>
+	<div class="border p-4 text-center mb-3">
+		<h6 class="mb-3"><i class="bi-moon-stars me-2" /> Piket Malam</h6>
+		<div class="border p-3 mb-2">
+			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
+		</div>
+		<div class="border p-3">
+			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
+		</div>
+	</div>
+	<div class="border p-4 text-center mb-3">
+		<h6 class="mb-3"><i class="bi-moon-stars me-2" /> Piket Malam</h6>
+		<div class="border p-3 mb-2">
+			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
+		</div>
+		<div class="border p-3">
+			<h6><i class="bi-person-circle me-2" /> Imran Mokodompit</h6>
+		</div>
+	</div>
 </section>
+
+<style>
+	h6 {
+		margin-bottom: -1px;
+	}
+</style>
