@@ -46,25 +46,25 @@
 		<p>(Pukul 24:00 - 08:00 WITA)</p>
 		{#each malam as m}
 			<div class="p-3 mb-2 bg-body-secondary">
-				<h6><i class="bi-person-circle me-2" /> {namaSecurity(m)}</h6>
+				<h6><i class="bi-person-circle me-1" /> {namaSecurity(m)}</h6>
 			</div>
 		{/each}
 	</div>
 	<div class="border p-3 text-center mb-2 shadow-sm">
-		<h5><i class="bi-moon-stars me-2" /> Piket Pagi</h5>
+		<h5><i class="bi-sun me-2" /> Piket Pagi</h5>
 		<p>(Pukul 08:00 - 16:00 WITA)</p>
 		{#each pagi as p}
 			<div class="p-3 mb-2 bg-body-secondary">
-				<h6><i class="bi-person-circle me-2" /> {namaSecurity(p)}</h6>
+				<h6><i class="bi-person-circle me-1" /> {namaSecurity(p)}</h6>
 			</div>
 		{/each}
 	</div>
 	<div class="border p-3 text-center mb-2 shadow-sm">
-		<h5><i class="bi-moon-stars me-2" /> Piket Sore</h5>
+		<h5><i class="bi-sunset me-2" /> Piket Sore</h5>
 		<p>(Pukul 16:00 - 24:00 WITA)</p>
 		{#each sore as s}
 			<div class="p-3 mb-2 bg-body-secondary">
-				<h6><i class="bi-person-circle me-2" /> {namaSecurity(s)}</h6>
+				<h6><i class="bi-person-circle me-1" /> {namaSecurity(s)}</h6>
 			</div>
 		{/each}
 	</div>
